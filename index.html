@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Raksha Bandhan, Monish! ❤️ | A Special Surprise</title>
+    <meta name="description" content="A personal interactive Raksha Bandhan surprise website created especially for Monish.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rozha+One&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Particle Canvas (Petals, Sparkles, Diyas, Confetti) -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Floating Ambient Background Lighting & Decorative Motifs -->
+    <div class="ambient-glow glow-top"></div>
+    <div class="ambient-glow glow-bottom"></div>
+
+
+    <!-- MAIN CONTAINER WITH MULTIPLE CINEMATIC SECTIONS -->
+    <main id="app-container">
+
+        <!-- ==========================================
+             SECTION 1: OPENING SCREEN ("HEY MONISH 👀")
+             ========================================== -->
+        <section id="sec-opening" class="section active-section">
+            <div class="opening-content">
+                <div class="diya-decor diya-left">🪔</div>
+                <div class="diya-decor diya-right">🪔</div>
+                
+                <div class="mysterious-badge">A Special Surprise</div>
+                
+                <h1 class="opening-typing-container">
+                    <span class="opening-line line-1">Hey Monish... 👀</span>
+                    <span class="opening-line line-2">I made something for you.</span>
+                    <span class="opening-line line-3">But before you judge my coding skills... 😂</span>
+                </h1>
+
+                <div class="button-wrapper fade-in-delayed">
+                    <button id="btn-start-surprise" class="btn btn-primary pulse-glow">
+                        OPEN YOUR SURPRISE 🎁
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SECTION 2: RAKSHA BANDHAN CELEBRATION
+             ========================================== -->
+        <section id="sec-celebration" class="section">
+            <div class="toran-garland">
+                <div class="marigold-flower">🌼</div>
+                <div class="marigold-flower">🌸</div>
+                <div class="marigold-flower">🌼</div>
+                <div class="marigold-flower">🌸</div>
+                <div class="marigold-flower">🌼</div>
+                <div class="marigold-flower">🌸</div>
+                <div class="marigold-flower">🌼</div>
+            </div>
+
+            <div class="content-card celebration-card">
+                <div class="card-badge">✨ Festive Wishes ✨</div>
+                <h2 class="main-festive-heading">
+                    Happy Raksha Bandhan, <span class="highlight-name brother-name-slot">Monish ehhh</span>! ❤️
+                </h2>
+                
+                <div class="subtitle-group">
+                    <p class="subheading">To my favourite brother...</p>
+                    <p class="playful-line">...and occasionally my most annoying brother. 😌</p>
+                </div>
+
+                <!-- Central Decorative Animated Rakhi -->
+                <div class="rakhi-hero-wrapper">
+                    <div class="rakhi-aura"></div>
+                    <svg class="rakhi-hero-svg" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Silk Threads Left -->
+                        <path d="M 10,60 Q 75,35 120,60" fill="none" stroke="url(#gold-thread)" stroke-width="6" stroke-dasharray="4,2"/>
+                        <path d="M 10,60 Q 75,85 120,60" fill="none" stroke="#d4143d" stroke-width="4"/>
+                        
+                        <!-- Silk Threads Right -->
+                        <path d="M 180,60 Q 225,35 290,60" fill="none" stroke="url(#gold-thread)" stroke-width="6" stroke-dasharray="4,2"/>
+                        <path d="M 180,60 Q 225,85 290,60" fill="none" stroke="#d4143d" stroke-width="4"/>
+
+                        <!-- Beads Left -->
+                        <circle cx="70" cy="54" r="7" fill="#f7941d"/>
+                        <circle cx="95" cy="58" r="8" fill="#ffd700" stroke="#fff" stroke-width="1.5"/>
+                        <circle cx="115" cy="60" r="6" fill="#d4143d"/>
+
+                        <!-- Beads Right -->
+                        <circle cx="185" cy="60" r="6" fill="#d4143d"/>
+                        <circle cx="205" cy="58" r="8" fill="#ffd700" stroke="#fff" stroke-width="1.5"/>
+                        <circle cx="230" cy="54" r="7" fill="#f7941d"/>
+
+                        <!-- Centerpiece Dial & Ornament -->
+                        <g class="rakhi-center-spin">
+                            <circle cx="150" cy="60" r="34" fill="url(#saffron-grad)" stroke="#ffd700" stroke-width="3"/>
+                            <polygon points="150,30 157,48 176,48 161,59 167,77 150,66 133,77 139,59 124,48 143,48" fill="#ffd700"/>
+                            <circle cx="150" cy="60" r="16" fill="#800e28"/>
+                            <circle cx="150" cy="60" r="8" fill="#ffffff"/>
+                            <circle cx="150" cy="60" r="4" fill="#d4143d"/>
+                        </g>
+
+                        <!-- Gradients -->
+                        <defs>
+                            <linearGradient id="gold-thread" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#f7941d"/>
+                                <stop offset="50%" stop-color="#ffd700"/>
+                                <stop offset="100%" stop-color="#d4af37"/>
+                            </linearGradient>
+                            <radialGradient id="saffron-grad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#ffd700"/>
+                                <stop offset="70%" stop-color="#f7941d"/>
+                                <stop offset="100%" stop-color="#b80c2e"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <div class="nav-btn-wrapper">
+                    <button id="btn-to-greeting" class="btn btn-secondary">
+                        Continue the Journey ✨
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SECTION 3: PERSONALIZED GREETING
+             ========================================== -->
+        <section id="sec-greeting" class="section">
+            <div class="content-card greeting-card">
+                <div class="card-corner-motif top-left"></div>
+                <div class="card-corner-motif top-right"></div>
+                <div class="card-corner-motif bottom-left"></div>
+                <div class="card-corner-motif bottom-right"></div>
+
+                <h3 class="card-title-handwritten">Dear <span class="brother-name-slot">Monish</span> ❤️</h3>
+                
+                <div class="greeting-body">
+                    <blockquote class="sibling-quote">
+                        "Behind every little sister is a big brother who is ready to catch her if she falls, guide her when she's lost, and smile with her through it all.<br>
+                        You've been a protector and a guide, but most importantly, a true friend.<br>
+                        I'm so lucky to have you in my corner.<br>
+                        And somehow... <strong>I got you. 😂❤️</strong>"
+                    </blockquote>
+
+                    <p class="greeting-heartfelt">
+                        Jokes apart, I'm really lucky to have you as my brother.
+                    </p>
+                </div>
+
+                <div class="floating-hearts-container">
+                    <span class="f-heart">❤️</span>
+                    <span class="f-heart">💖</span>
+                    <span class="f-heart">✨</span>
+                </div>
+
+                <button id="btn-to-rakhi" class="btn btn-primary pulse-btn">
+                    There's more... 👀
+                </button>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SECTION 4: INTERACTIVE VIRTUAL RAKHI TYING
+             ========================================== -->
+        <section id="sec-rakhi" class="section">
+            <div class="content-card rakhi-interactive-card">
+                <div class="interactive-header">
+                    <h2>Virtual Rakhi Tying 🪢</h2>
+                    <p class="instruction-line">Okay <span class="brother-name-slot">Monish</span>... hold still. 😌</p>
+                    <p class="sub-instruction">Time to tie your virtual Rakhi.</p>
+                </div>
+
+                <!-- Interactive Stage with Brother's Wrist & Movable Rakhi -->
+                <div id="rakhi-stage" class="rakhi-stage">
+                    
+                    <!-- Wrist & Hand SVG Illustration -->
+                    <svg class="wrist-svg" viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="hand-shadow" x="-10%" y="-10%" width="130%" height="130%">
+                                <feDropShadow dx="3" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+                            </filter>
+                            <linearGradient id="skin-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#d9a37e"/>
+                                <stop offset="50%" stop-color="#eaaf8a"/>
+                                <stop offset="100%" stop-color="#dfa47f"/>
+                            </linearGradient>
+                            <linearGradient id="skin-shadow-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="rgba(160, 95, 60, 0.3)"/>
+                                <stop offset="40%" stop-color="rgba(0, 0, 0, 0)"/>
+                                <stop offset="100%" stop-color="rgba(140, 75, 45, 0.4)"/>
+                            </linearGradient>
+                            <linearGradient id="kurta-sleeve" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#4d0716"/>
+                                <stop offset="70%" stop-color="#7a0f26"/>
+                                <stop offset="100%" stop-color="#8b152b"/>
+                            </linearGradient>
+                            <linearGradient id="gold-embroidery" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#ffd700"/>
+                                <stop offset="50%" stop-color="#b8860b"/>
+                                <stop offset="100%" stop-color="#ffd700"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Hand & Arm Shadow Group -->
+                        <g filter="url(#hand-shadow)">
+                            <!-- Kurta Sleeve (Left) -->
+                            <path d="M 0,35 L 110,42 C 118,43 122,50 122,65 L 122,185 C 122,200 118,207 110,208 L 0,215 Z" fill="url(#kurta-sleeve)" stroke="#2b030b" stroke-width="2"/>
+                            <!-- Golden Embroidered Cuff Line -->
+                            <rect x="110" y="42" width="14" height="166" rx="3" fill="url(#gold-embroidery)" stroke="#ffd700" stroke-width="1"/>
+                            <!-- Sleeve Crease Lines -->
+                            <path d="M 30,40 Q 70,80 30,130" fill="none" stroke="rgba(255, 215, 0, 0.25)" stroke-width="2"/>
+                            <path d="M 50,110 Q 90,160 50,210" fill="none" stroke="rgba(255, 215, 0, 0.2)" stroke-width="2"/>
+
+                            <!-- Forearm Skin Base -->
+                            <path d="M 124,58 
+                                     C 150,56 175,58 200,60 
+                                     C 225,62 250,65 270,72 
+                                     C 300,70 330,65 355,75 
+                                     C 375,83 385,98 375,115 
+                                     C 365,128 340,128 325,122 
+                                     C 350,128 385,125 425,125 
+                                     C 445,125 460,135 455,148 
+                                     C 450,160 430,162 405,160 
+                                     C 425,164 450,165 448,178 
+                                     C 445,190 425,192 395,188 
+                                     C 415,193 430,196 428,207 
+                                     C 425,217 400,218 360,210 
+                                     C 310,212 280,205 250,195 
+                                     C 210,192 165,192 124,190 Z" 
+                                  fill="url(#skin-gradient)" stroke="#b57a55" stroke-width="2"/>
+
+                            <!-- Hand Anatomical Details & Finger Separations -->
+                            <!-- Thumb Overlay -->
+                            <path d="M 265,74 C 290,62 330,55 355,70 C 372,80 378,96 360,112 C 342,124 315,122 285,110 Z" fill="#e5aa84" stroke="#c0845f" stroke-width="2"/>
+                            <path d="M 335,70 Q 355,78 345,95" fill="none" stroke="#ba7d5a" stroke-width="2"/>
+
+                            <!-- Index Finger Detail -->
+                            <path d="M 320,122 C 355,123 400,122 425,125 C 442,127 452,137 445,146 C 438,154 415,155 385,152 Z" fill="#e0a37d" stroke="#b87d58" stroke-width="1.8"/>
+                            <!-- Middle Finger Detail -->
+                            <path d="M 315,150 C 350,154 410,156 442,158 C 458,160 458,174 442,178 C 420,181 370,180 340,175 Z" fill="#da9d77" stroke="#b37853" stroke-width="1.8"/>
+                            <!-- Ring Finger Detail -->
+                            <path d="M 305,174 C 335,178 385,182 422,185 C 436,187 435,200 418,203 C 390,205 345,202 315,195 Z" fill="#d39670" stroke="#ac714c" stroke-width="1.8"/>
+                            <!-- Pinky Finger Detail -->
+                            <path d="M 295,194 C 320,198 365,203 405,206 C 420,208 418,217 400,218 C 365,219 315,214 280,202 Z" fill="#cc8f69" stroke="#a56b46" stroke-width="1.8"/>
+
+                            <!-- Palm / Hand Shading Layer -->
+                            <path d="M 124,58 
+                                     C 150,56 175,58 200,60 
+                                     C 225,62 250,65 270,72 
+                                     C 300,70 330,65 355,75 
+                                     C 375,83 385,98 375,115 
+                                     C 365,128 340,128 325,122 
+                                     C 350,128 385,125 425,125 
+                                     C 445,125 460,135 455,148 
+                                     C 450,160 430,162 405,160 
+                                     C 425,164 450,165 448,178 
+                                     C 445,190 425,192 395,188 
+                                     C 415,193 430,196 428,207 
+                                     C 425,217 400,218 360,210 
+                                     C 310,212 280,205 250,195 
+                                     C 210,192 165,192 124,190 Z" 
+                                  fill="url(#skin-shadow-grad)" pointer-events="none"/>
+
+                            <!-- Traditional Metallic Kada / Watch Accent on Forearm -->
+                            <rect x="145" y="56" width="16" height="135" rx="8" fill="url(#gold-embroidery)" stroke="#ffd700" stroke-width="1.5"/>
+                            <line x1="153" y1="56" x2="153" y2="191" stroke="#fff" stroke-width="2" opacity="0.6"/>
+
+                            <!-- Palm Crease Lines -->
+                            <path d="M 285,108 C 300,120 310,145 295,175" fill="none" stroke="#ba7a54" stroke-width="2" opacity="0.7"/>
+                            <path d="M 310,125 C 330,140 340,160 335,185" fill="none" stroke="#ba7a54" stroke-width="1.5" opacity="0.6"/>
+                        </g>
+
+                        <!-- Tying Target Spot Marker on Wrist -->
+                        <circle id="tying-target" cx="210" cy="125" r="28" fill="rgba(255, 215, 0, 0.15)" stroke="#ffd700" stroke-width="2" stroke-dasharray="6,4" class="pulse-target"/>
+                        <text x="210" y="129" text-anchor="middle" fill="#ffd700" font-size="11" font-weight="bold">TARGET WRIST</text>
+
+                        <!-- SVG Animated Wrapping Threads (Hidden initially, animated during tie) -->
+                        <path id="wrap-thread-top" class="wrap-thread" d="M 210,60 C 175,80 175,170 210,190" fill="none" stroke="#ffd700" stroke-width="6" stroke-linecap="round" stroke-dasharray="160" stroke-dashoffset="160"/>
+                        <path id="wrap-thread-bottom" class="wrap-thread" d="M 210,60 C 245,80 245,170 210,190" fill="none" stroke="#d4143d" stroke-width="6" stroke-linecap="round" stroke-dasharray="160" stroke-dashoffset="160"/>
+                    </svg>
+
+                    <!-- Interactive Floating Rakhi Widget -->
+                    <div id="interactive-rakhi" class="interactive-rakhi-widget">
+                        <div class="rakhi-thread-left"></div>
+                        <div class="rakhi-center-badge">
+                            <div class="gem-sparkle">🧿</div>
+                        </div>
+                        <div class="rakhi-thread-right"></div>
+                    </div>
+
+                </div>
+
+                <!-- Tying Action Button -->
+                <div class="rakhi-action-area">
+                    <button id="btn-tie-rakhi" class="btn btn-gold pulse-glow">
+                        Tie Rakhi 🪢❤️
+                    </button>
+                </div>
+
+                <!-- Post-Tying Success Banner (Hidden by default) -->
+                <div id="tying-success-msg" class="tying-success-card hidden">
+                    <div class="success-icon">🎉</div>
+                    <h3 class="success-heading">Rakhi successfully tied! ❤️</h3>
+                    <p class="success-sub">Congratulations, you are officially stuck with me forever. 😂</p>
+                    
+                    <div class="fate-buttons">
+                        <button id="btn-accept-fate" class="btn btn-primary">
+                            Accept Your Fate 😂
+                        </button>
+                        <button id="btn-escape" class="btn btn-outline runaway-btn">
+                            Try to Escape 🏃‍♂️
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SECTION 5: FUNNY RAKSHA BANDHAN WISHES
+             ========================================== -->
+        <section id="sec-wishes" class="section">
+            <div class="content-header">
+                <h2>Important Wishes for <span class="brother-name-slot">Monish</span> 😂</h2>
+                <p class="header-desc">Standard sibling rules apply!</p>
+            </div>
+
+            <!-- Wishes Grid Cards -->
+            <div class="wishes-grid">
+
+                <!-- Card 1 -->
+                <div class="wish-card" data-speed="1">
+                    <div class="card-icon">🎁</div>
+                    <div class="card-text">
+                        <p class="wish-main">Happy Raksha Bandhan! ❤️</p>
+                        <p class="wish-detail">
+                            May you have unlimited happiness, success, money... 
+                            <span class="punchline">and unlimited patience to deal with me. 😂</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="wish-card" data-speed="2">
+                    <div class="card-icon">🛡️</div>
+                    <div class="card-text">
+                        <p class="wish-main">Thank you for being my brother...</p>
+                        <p class="wish-detail">
+                            My unofficial bodyguard, my occasional therapist, 
+                            <span class="punchline">and my favourite person to annoy. 😌</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="wish-card" data-speed="3">
+                    <div class="card-icon">💳</div>
+                    <div class="card-text">
+                        <p class="wish-main">Don't worry, I won't ask for an expensive Rakhi gift...</p>
+                        <p class="wish-dots">. . .</p>
+                        <p class="wish-detail">
+                            <span class="punchline">Okay, that's a lie. 🎁😂</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="wish-card" data-speed="4">
+                    <div class="card-icon">🌟</div>
+                    <div class="card-text">
+                        <p class="wish-main">May all your dreams come true.</p>
+                        <p class="wish-detail">
+                            Except the dreams where you escape from your responsibilities as my brother. 😌
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 1 -->
+                <div class="wish-card" data-speed="1">
+                    <div class="card-icon">❤️</div>
+                    <div class="card-text">
+                        <p class="wish-main">For the Best Brother ❤️</p>
+                        <p class="wish-detail">
+                            Life wouldn't be the same without you. Thank you for all the little things you do. You're genuinely one of my favourite humans. 🥹❤️
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 1 -->
+                <div class="wish-card" data-speed="1">
+                    <div class="card-icon">🎁</div>
+                    <div class="card-text">
+                        <p class="wish-main">And Finally... 😌</p>
+                        <p class="wish-detail">And may you suddenly remember
+that your sister is waiting for her gift. 👀
+                            <span class="punchline">Just a friendly reminder. 😂🎁</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="center-btn-wrapper">
+                <button id="btn-to-memories" class="btn btn-secondary">
+                    See Our Memories 📸
+                </button>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SECTION 6: MEMORIES GALLERY
+             ========================================== -->
+        <section id="sec-memories" class="section">
+            <div class="content-header">
+                <h2>Our Little Memory Lane 📸</h2>
+                <p class="header-desc">Moments that prove we survived each other</p>
+            </div>
+
+            <div class="memories-grid">
+
+                <!-- Memory 1 -->
+                <div class="memory-card">
+        <div class="photo-frame">
+            <img src="1.jpeg" alt="Partners in crime" class="memory-img">
+            <span class="tape-badge">Memory #1</span>
+        </div>
+        <div class="memory-info">
+            <p class="memory-caption">Partners in crime 😂</p>
+            <span class="memory-date">The Good Old Days</span>
+        </div>
+    </div>
+
+                <!-- Memory 2 -->
+    <div class="memory-card">
+        <div class="photo-frame">
+            <img src="2.jpeg" alt="Annoying each other" class="memory-img">
+            <span class="tape-badge">Memory #2</span>
+        </div>
+        <div class="memory-info">
+            <p class="memory-caption">Another day of annoying each other.</p>
+            <span class="memory-date">Every single day</span>
+        </div>
+    </div>
+
+    <!-- Memory 3 -->
+    <div class="memory-card">
+        <div class="photo-frame">
+            <img src="3.jpeg" alt="Cute sibling moment" class="memory-img">
+            <span class="tape-badge">Memory #3</span>
+        </div>
+        <div class="memory-info">
+            <p class="memory-caption">Okay... this one was actually cute. ❤️</p>
+            <span class="memory-date">Rare Moment</span>
+        </div>
+    </div>
+
+    <!-- Memory 4 -->
+    <div class="memory-card">
+        <div class="photo-frame">
+            <img src="4.jpeg" alt="Proof of survival" class="memory-img">
+            <span class="tape-badge">Memory #4</span>
+        </div>
+        <div class="memory-info">
+            <p class="memory-caption">Proof that we survived each other.</p>
+            <span class="memory-date">Survival Award</span>
+        </div>
+    </div>
+
+    <!-- Memory 5 -->
+    <div class="memory-card">
+        <div class="photo-frame">
+            <img src="5.jpeg" alt="Favourite memory" class="memory-img">
+            <span class="tape-badge">Memory #5</span>
+        </div>
+        <div class="memory-info">
+            <p class="memory-caption">One of my favourite memories. ❤️</p>
+            <span class="memory-date">Best Times</span>
+        </div>
+    </div>
+
+    <!-- Memory 6 -->
+    <div class="memory-card">
+        <div class="photo-frame">
+            <img src="6.png" alt="More memories" class="memory-img">
+            <span class="tape-badge">Memory #6</span>
+        </div>
+        <div class="memory-info">
+            <p class="memory-caption">More memories loading...</p>
+            <span class="memory-date">To Be Continued</span>
+        </div>
+    </div>
+
+            </div>
+
+            <div class="center-btn-wrapper">
+                <button id="btn-to-letter" class="btn btn-primary pulse-glow">
+                    One Last Thing... 💌
+                </button>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SECTION 7: PERSONAL LETTER SECTION
+             ========================================== -->
+        <section id="sec-letter" class="section">
+            <div class="letter-section-header">
+                <h2>One Last Thing... 💌</h2>
+                <p class="letter-sub">I wrote something for you.</p>
+            </div>
+
+            <!-- Envelope Container -->
+            <div class="envelope-container">
+                <!-- Interactive 3D Envelope -->
+                <div id="envelope" class="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-pocket"></div>
+                    <div class="wax-seal">
+                        <span>❤️</span>
+                    </div>
+                </div>
+
+                <!-- Slide-Out Parchment Letter Card -->
+                <div id="letter-card" class="letter-card">
+                    <div class="letter-paper-header">
+                        <span class="letter-date">For <span class="brother-name-slot">Monish ehhhh</span> ❤️</span>
+                        <span class="letter-seal">🪢</span>
+                    </div>
+
+                    <h2 class="letter-title">My Brother, My Quiet Hero</h2>
+
+                    <p class="letter-subtitle">
+                        <em>For the one who never asks for credit, but deserves it all.</em>
+                    </p>
+
+                    <div class="letter-content">
+                        <p>
+                            You’ve walked beside me, strong and sure,<br>
+                            Through winds that howled and hearts unsure.<br>
+                            You never needed shining lights,<br>
+                            You’ve always stood for what is right.
+                        </p>
+
+                        <p>
+                            Thank You Monish for all the things which you have done for me...<br>
+                            You helped with hands, without a pause.<br>
+                            A gentle strength, a steady guide,<br>
+                            A big brother with a giant stride.
+                        </p>
+
+                        <p>
+                            You never ask for much at all,<br>
+                            Yet always catch me when I fall.<br>
+                            And though you rarely wear a crown,<br>
+                            You lift the whole world when it’s down.
+                        </p>
+
+                        <p>
+                            I looked to you when I was small,<br>
+                            And truth be told, I still do, y’all—<br>
+                            You’ve shown me grace, you’ve taught me pride,<br>
+                            You’ve been my calm, my guard, my guide.
+                        </p>
+
+                        <p>
+                            So here’s my voice, loud and clear,<br>
+                            To say what you deserve to hear:<br>
+                            I love you more than words can show<br>
+                            You’re my hero, and I hope you know.
+                        </p>
+                    </div>
+
+                    <div class="letter-signature">
+                        <p>With all my love, ❤️</p>
+                        <p class="sister-signature">Your annoying sister</p>
+                    </div>
+                </div>
+
+                <div class="envelope-controls">
+                    <button id="btn-open-letter" class="btn btn-gold pulse-btn">
+                        Open Letter 💌
+                    </button>
+                    <button id="btn-to-final" class="btn btn-primary hidden">
+                        The Final Surprise ✨
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SECTION 8: FINAL SURPRISE & GRAND FINALE
+             ========================================== -->
+        <section id="sec-final" class="section">
+            <div class="final-container">
+                
+                <!-- Cinematic Sequenced Reveal Text -->
+                <div id="final-text-sequence" class="final-sequence">
+                    <p class="f-seq seq-1">One More Thing... ❤️</p>
+                    <p class="f-seq seq-2">No matter how much we fight...</p>
+                    <p class="f-seq seq-3">...you're always going to be my brother.</p>
+                </div>
+
+                <!-- Grand Finale Header (Revealed after sequence) -->
+                <div id="finale-grand-box" class="finale-box hidden-fade">
+                    <div class="sparkle-ring">✨ 🪔 ✨</div>
+                    <h1 class="grand-heading">
+                        Happy Raksha Bandhan, <span class="brother-name-slot">Monish</span> ❤️
+                    </h1>
+                    <p class="forever-tagline">You are stuck with me forever. 😂</p>
+
+                    <div class="final-badge-box">
+                        <p class="made-with-love">Made with ❤️ just for you.</p>
+                        <p class="gift-prompt">Now where's my gift? 👀🎁</p>
+                    </div>
+
+                    <!-- Fun Interactive Gift Action Buttons -->
+                    <div class="gift-actions">
+                        <button id="btn-gpay-gift" class="btn btn-gold">
+                            Send Gift Money 💵
+                        </button>
+                        <button id="btn-hug-gift" class="btn btn-secondary">
+                            Claim Sister's Hug 🤗
+                        </button>
+                        <button id="btn-replay" class="btn btn-outline">
+                            Replay Surprise 🔄
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Dialog for Fun Interactions (e.g. Gift button clicks) -->
+    <div id="fun-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <button id="modal-close" class="modal-close-btn">&times;</button>
+            <div id="modal-content" class="modal-body">
+                <!-- Dynamic content injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Source File -->
+    <script src="script.js"></script>
+</body>
+</html>
